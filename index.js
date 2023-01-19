@@ -1,4 +1,3 @@
-// const client = require('./connection.js')
 const { Client } = require('pg')
 
 const client = new Client({
@@ -14,8 +13,8 @@ const bodyParser = require("body-parser");
 const cors = require('cors')
 app.use(bodyParser.json());
 app.use(cors());
-app.listen(process.env.PORT || 3300, () => {
-    console.log("Server is now listening at post 3300");
+app.listen(process.env.PORT || 3400, () => {
+    console.log("Server is now listening at post 3400");
 })
 
 client.connect(function (err) {
@@ -97,4 +96,3 @@ app.delete('/users/:id', (req, res) => {
     })
     client.end;
 })
-//cut copy paste
