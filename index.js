@@ -51,8 +51,11 @@ app.get("/users/:id", (req, res) => {
 //POST
 app.post('/users', (req, res) => {
     const user = req.body;
-    let insertQuery = `insert into employ(id, email, first_name, last_name) 
-                       values(${user.id}, '${user.email}', '${user.first_name}', '${user.last_name}')`
+    // console.log(user.ID);
+    // console.log(user.Balance);
+    // console.log(user.RollNo);
+    let insertQuery = `insert into "WalletInfo"("ID", "Balance", "RollNo") 
+                       values(${user.ID}, '${user.Balance}', '${user.RollNo}')`
 
     client.query(insertQuery, (err, result) => {
         if (!err) {
