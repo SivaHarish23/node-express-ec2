@@ -14,7 +14,7 @@ const bodyParser = require("body-parser");
 const cors = require('cors')
 app.use(bodyParser.json());
 app.use(cors());
-app.listen(process.env.PORT || 5001, () => {
+app.listen(process.env.PORT || 3300, () => {
     console.log("Server is now listening at post 3300");
 })
 
